@@ -26,8 +26,8 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        # Ejecutamos npm ci en la raíz
-        run: npm ci
+	# Ejecutamos npm ci en la raíz, usando --legacy-peer-deps para ignorar conflictos de versiones
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         # Ejecutamos npm run build en la raíz
