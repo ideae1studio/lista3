@@ -1,5 +1,4 @@
 // Importaciones necesarias de Vite y sus plugins
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs"; // Módulo 'fs' de Node.js para interactuar con el sistema de archivos
@@ -10,10 +9,10 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime"; // Plugin es
 // --- Configuración de Plugins ---
 // Se agrupan los plugins que Vite utilizará
 const plugins = [
-  react(), // Plugin oficial para React (HMR, JSX, etc.)
-  tailwindcss(), // Plugin para integrar Tailwind CSS
-  jsxLocPlugin(), // Plugin de Builder.io (probablemente para localización o rastreo de JSX)
-  vitePluginManusRuntime(), // Plugin específico del runtime de Manu.ai
+  react(), // Plugin oficial para React (HMR, JSX, etc.)
+  tailwindcss(), // Plugin para integrar Tailwind CSS
+  // jsxLocPlugin(), // ELIMINADO: Este plugin causaba conflictos de versión y fue desinstalado.
+  vitePluginManusRuntime(), // Plugin específico del runtime de Manu.ai
 ];
 
 // --- Definición de la Configuración ---
